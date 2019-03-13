@@ -1,10 +1,18 @@
 
 
+int draw( struct Screen screen, char *name ) {
 
+}
 
-void helperline( struct Vector V1, struct Vector V2, struct Color COlor,
+void line( struct Vector p1, struct Vector p2, struct Color colors ) {
+
+}
+
+/* big gay line algorithm ( needs work )
+
+void drawhelperline( struct Vector V1, struct Vector V2, struct Color COlor,
                  int slope,  char uhhh, char borger, char yees, char soup,
-                 char xinit, char yinit ){
+                 char xinit, char yinit ) {
 
 	int x = V1.pos[0]; int y = V1.pos[1];
 
@@ -37,3 +45,5 @@ void draw_line( struct Vector V1, struct Vector V2, struct Color color ) {
 		V2.pos[1] = V1.pos[1] ^ V2.pos[1];
 		V1.pos[1] = V1.pos[1] ^ V2.pos[1];
 	}
+
+*/
