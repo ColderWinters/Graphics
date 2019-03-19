@@ -15,6 +15,11 @@ struct Color {
 };
 
 struct Screen {
-  unsigned *char[SCREEN_WIDTH];
-  void *sets;
+  unsigned char *columns[SCREEN_WIDTH];
+  struct Object *objects;
+};
+
+struct Object {
+  struct Vector *edgelist;
+  struct Transform *T;
 };

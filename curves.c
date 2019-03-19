@@ -59,5 +59,15 @@ struct Function Bezzy( struct Screen jeff, struct Vector *points ) {
 }
 
 struct Function spline( struct Vector *points, struct Vector *diffs ) {
-
+  len = cols( points );
+  double **solverM = malloc( ( len * 2 ) + 1 );
+  int i = -1;
+  while( points[i++] ) {
+    double *colmn = malloc( 2 * len );
+    while( j ) {
+      pwrterm = ( ( 1 / (len - 1) ) * j )
+      solverM[2*i-1][2*j-1] = power( pwrterm, j )
+      solverM[2i][2j] =  power( pweterm )
+    }
+  }
 }

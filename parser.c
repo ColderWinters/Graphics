@@ -1,7 +1,12 @@
 
 
 int parser ( char **argsv ) {
-  f = open( argsv[1], );
+  if ( strcmp( argsv[1], "stdin" ) == 0 ) {
+    f = stdin;
+  }
+  else {
+    f = fopen( argsv[1], "r" );  f = open( argsv[1], "r" );
+  }
   char input[MAX_INPUT];
   fgets( input, MAX_INPUT, f );
   char c = input[0];
@@ -14,7 +19,7 @@ int parser ( char **argsv ) {
   }
   char *parsed[lines] = malloc( lines * sizeof(char*) );
   int i = 0;
-  while ( i < 0 ) {
-    
-  }
+
+  struct Screen content = malloc( sizeof(struct Screen))
+
 }
