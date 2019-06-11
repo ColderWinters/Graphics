@@ -1,18 +1,21 @@
+#include "transformation.h"
 
-#DEFINE TYPE_POLYNOMIAL 0
-#DEFINE TYPE_TRIG 1
-#DEFINE TYPE_COMPOSITION 2
-#DEFINE TYPE_ADD 3
-#DEFINE TYPE_DIVIDE 4
-#DEFINE TYPE_EXP 5
-
-
-struct Function {
-  struct Function components[3];
-};
+#define TYPE_POLYNOMIAL 0
+#define TYPE_TRIG 1
+#define TYPE_COMPOSITION 2
+#define TYPE_ADD 3
+#define TYPE_SUBSTRACT 4
+#define TYPE_DIVIDE 5
+#define TYPE_MULTIPLY 6
+#define TYPE_EXP 7
+#define TYPE_LOG 8
 
 struct SubFunction {
-  double **coeff;
-  double **extra;
+  double *coeffs;
+  double *extras;
   int type;
+};
+
+struct Function {
+  struct SubFunction components[3];
 };

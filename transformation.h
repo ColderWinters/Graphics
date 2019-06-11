@@ -1,3 +1,5 @@
+#include "matrix.h"
+
 struct Transform {
-  struct columns Vector[4];
+  struct Vector columns[4];
 };

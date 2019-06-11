@@ -1,0 +1,35 @@
+Desired Functions:
+  - Compiles
+    - MAKEfile
+  - Display
+    - Parse Scripts
+    - Animations:
+      - Frames
+      - Algebra
+      - Knobs
+        - Knob algebra
+  - Lines
+    - C(ool c)urves
+    - Parsing Component
+    - Fill triangles
+    - Anti-aliasing ( ? )
+  - Transforms:
+    - Multiplication
+      - Inheritance
+      - Object referring
+    - Parsing Component
+  - Basic Geometries
+    - Stitching
+    - Parsing Component
+    - Other shapes ( ? )
+  - Ray Trace:
+    - Reflection, dispersion
+    - Ambient ( ? )
+    - Refraction ( ? )
+      - With Dispersion
+    - Materials
+    - PARSING COMPONENT
+  - Non ray trace lighting:
+    - Per polygon
+    - Per pixel
+    - Vertex normals ( ? )

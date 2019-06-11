@@ -1,9 +1,9 @@
-
+#include "transform.h"
 
 
 //each do the transform on an object
 
-void rotation ( struct Object input, double rxy, double ryz, double rxz ) {
+Transform rotation_origin ( double rxy, double ryz, double rxz ) {
   struct Transform rot = malloc( sizeof( struct Transform ));
   for ( int i = 0; i < 4; i++; ) {
     rot[i] = malloc( sizeof( struct Vector ));
@@ -13,11 +13,11 @@ void rotation ( struct Object input, double rxy, double ryz, double rxz ) {
   rot[3].pos = [ , , , 0 ];
   rot[4].pos = [ 0, 0, 0, 1 ];
 
-  input.T = Multiply( dia, input.T );
+    return rot;
 
 }
 
-void translation ( struct Object input, int x, int y, int z ) {
+Transform translation ( int x, int y, int z ) {
   struct Transform tran = calloc( 1, sizeof( struct Transform ));
   for ( int i = 0; i < 4; i++; ) {
     tran[i] = calloc( 1, sizeof( struct Vector ));
@@ -27,18 +27,27 @@ void translation ( struct Object input, int x, int y, int z ) {
   tran[3].pos[4] = z;
   tran[4].pos[4] = 1;
 
-  input.T = Multiply( dia, input.T );
+  return tran;
 }
 
-void dialation ( struct Object input, double x, double y, double z ) {
+Transform dialation ( double x, double y, double z ) {
   struct Transform dia = calloc( 1, sizeof( struct Transform ));
   for ( int i = 0; i < 4; i++; ) {
-    dia[i] = calloc( 1 sizeof( struct Vector ));
+    dia[i] = calloc( 1, sizeof( struct Vector ));
   }
   dia[1].pos[1] = x;
   dia[2].pos[2] = y;
   dia[3].pos[3] = z;
   dia[4].pos[4] = 1;
 
-  input.T = Multiply( dia, input.T );
+  return dia;
+}
+
+Transform arb_rot ( struct Vector o, struct Vector d, double r ) {
+  struct Transform rott = malloc( sizeof( struct Transform ) );
+  for ( int i = 0; i < 4; i++; ) {
+    rott[i] = calloc( 1, sizeof( struct Vector ));
+  }
+
+
 }

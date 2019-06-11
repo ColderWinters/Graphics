@@ -1,36 +1,40 @@
-
+#include "draw.h"
 
 void draw ( struct Screen screen, int x, int y, struct Color brush ) {
   screen.columns[x][y][0] = brush.red;
   screen.columns[x][y][1] = brush.blue;
   screen.columns[x][y][2] = brush.green;
 }
+/*
+int drawtriangle ( struct Triangle triin ) {
+  if ( Triangle )
+} */
 
-void drawer ( struct Object writeto,
-              struct Function infun
+void drawer ( struct Screen writeto,
+              struct Function infun,
               int steps,
               struct Color c ) {
   int i = 0;
-  struct Vector edgeout[steps + 1];
-  while ( i < ( steps + 1 )  ){
+  struct Vector* edgeout[steps + 1];
+  while ( i <  ( steps + 1 )  ) {
     edgeout[i] = malloc( sizeof( struct Vector ) );
-    edgeout[i][3] = 1;
+    edgeout[i]->pos[3] = 1;
     i++;
   }
   i = 0;
   while ( i < steps ) {
     int d = 0;
     while ( d < 3 ) {
-      if ( infun.components[j].type = TYPE_POLYNOMIAL ) {
+      if ( infun.components[d].type = TYPE_POLYNOMIAL ) {
         int k = 0;
-        while ( infun.components[j].coeffs[k] ) {
-          edgeout[i][d] =   &(infun.components[j].coeffs[k])
-                          * power( ( ( i / steps ) * k ),
-                                   &(infun.components[j].extras[k]) );
+        while ( infun.components[d].coeffs[k] ) {
+          edgeout[i]->pos[d] =  (infun.components[d].coeffs[k])
+                              * pow( ( ( i / steps ) * k ),
+                                     (infun.components[d].extras[k]) );
           k++;
         }
       }
-      if ( infun.components[j].type = TYPE_TRIG       ) {
+      if ( infun.components[d].type = TYPE_TRIG       ) {
 
       }
     }
@@ -47,7 +51,7 @@ void line( struct Vector p1, struct Vector p2,
   int x2 = trunc( p2.pos[0] );
   int y2 = trunc( p2.pos[1] );
 
-  if x1 > x2 [0] {
+  if ( x1 > x2 ) {
 		x1 = x1 ^ x2;
 		x2 = x1 ^ x2;
 		x1 = x1 ^ x2;

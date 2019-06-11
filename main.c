@@ -1,10 +1,5 @@
-#include "curves.h"
-#include "display.h"
-#include "draw.h"
-#include "matrix.h"
-#include "parser.h"
-#include "transformation.h"
+#include "main.h"
 
-int main( char **argsv, ) {
-  parser( argsv );
+int main( int argc, char **argsv ) {
+  struct Screen out = parser( argsv );
 }
